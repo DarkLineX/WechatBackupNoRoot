@@ -126,8 +126,3 @@
     }
 ]
 ```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?MiDuoKi/WechatBackupNoRoot&type=Date)](https://star-history.com/?utm_source=bestxtools.com#MiDuoKi/WechatBackupNoRoot&Date)
-
