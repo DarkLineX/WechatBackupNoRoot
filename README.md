@@ -2,8 +2,8 @@
 
 微信聊天数据备份 
 
-特点:
-
+该版本软件特点:
+- 操作简单,无需额外软件配合
 - 无需手机ROOT
 - 无需电脑配合
 - 无需解密,数据明文保存
@@ -126,4 +126,8 @@
     }
 ]
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?MiDuoKi/WechatBackupNoRoot&type=Date)](https://star-history.com/?utm_source=bestxtools.com#MiDuoKi/WechatBackupNoRoot&Date)
 
