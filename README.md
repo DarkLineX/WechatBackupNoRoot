@@ -8,7 +8,11 @@
 - 无需电脑配合
 - 无需解密,数据明文保存
 
-备份效果:
+开箱即用: [工具下载页面](https://github.com/MiDuoKi/WechatBackupNoRoot/releases)
+
+
+
+#### 备份效果:
 
 ![聊天图片](image/image1.jpg)
 
