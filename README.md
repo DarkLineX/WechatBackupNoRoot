@@ -1,6 +1,8 @@
 ### WeChatBackupNoRoot 
 
-微信聊天数据备份 
+免ROOT微信聊天数据备份/导出工具
+
+
 
 特点:
 
