@@ -10,8 +10,7 @@
 
 备份效果:
 
-![image/image1.jpg]()
-
+![聊天图片](image/image1.jpg)
 
 
 ```json
