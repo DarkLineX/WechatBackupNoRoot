@@ -14,6 +14,12 @@
 开箱即用: [工具下载页面](https://github.com/MiDuoKi/WechatBackupNoRoot/releases)
 
 
+### 支持的微信版本【微信-我-设置-关于微信 查看版本】
+
+
+- Version 8.0.21
+
+
 
 #### 备份效果:
 
