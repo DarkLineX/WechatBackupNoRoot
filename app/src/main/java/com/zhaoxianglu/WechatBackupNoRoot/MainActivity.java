@@ -12,15 +12,19 @@ import android.view.View;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.FileIOUtils;
 import com.blankj.utilcode.util.FileUtils;
 import com.blankj.utilcode.util.GsonUtils;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.vanniktech.rxpermission.RealRxPermission;
+import com.zhaoxianglu.WechatBackupNoRoot.constant.NodeInfo;
+import com.zhaoxianglu.WechatBackupNoRoot.constant.WeChatConstant;
 import com.zhaoxianglu.WechatBackupNoRoot.floating.FloatingView;
 import com.zhaoxianglu.WechatBackupNoRoot.floating.FloatingViewConfig;
 import com.zhaoxianglu.WechatBackupNoRoot.utils.AutoUtils;
@@ -28,11 +32,14 @@ import com.zhaoxianglu.WechatBackupNoRoot.wechat.WeChatAuto;
 import com.zhaoxianglu.WechatBackupNoRoot.wechat.WeChatMessage;
 import com.zhaoxianglu.WechatBackupNoRoot.wechat.WeChatMessagePage;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static com.zhaoxianglu.WechatBackupNoRoot.constant.WeChatConstant.AdaptationVersionNames;
 import static com.zhaoxianglu.WechatBackupNoRoot.utils.AutoUtils.SLIDE_DOWN;
 import static com.zhaoxianglu.WechatBackupNoRoot.utils.AutoUtils.appPause;
 
@@ -51,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static List<WeChatMessage> LastMessageList = new ArrayList<>();
     private static List<WeChatMessagePage> AllPageMessageList = new ArrayList<>();
     private static int PageIndex = 0;
+    private TextView tvInfo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +74,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         RealRxPermission.getInstance(getApplicationContext())
                 .requestEach(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .subscribe();
+
+        //获取版本
+
+
+
+        tvInfo = (TextView) findViewById(R.id.tv_info);
+
+        StringBuffer sb = new StringBuffer();
+
+        WeChatConstant.VersionName =  AppUtils.getAppVersionName(WeChatConstant.PackageName);
+        WeChatConstant.VersionCode =  AppUtils.getAppVersionCode(WeChatConstant.PackageName);
+
+        sb.append("微信版本 "+WeChatConstant.VersionName+"\n");
+
+        if(Arrays.asList(AdaptationVersionNames).contains(WeChatConstant.VersionName)){
+            sb.append("当前微信版本支持");
+        }else {
+            sb.append("当前微信版本不支持");
+        }
+
+        tvInfo.setText(sb.toString());
 
     }
 
@@ -137,19 +167,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static void msgGet(){
         while (isRunning) {
             WeChatMessagePage weChatMessagePage = new WeChatMessagePage(PageIndex);
-            List<WeChatMessage> messageList = new ArrayList<>();
 
 
-            AccessibilityNodeInfo titleName = AutoUtils.getAutoElementById(AutoUtils.service,"com.tencent.mm:id/kog",0);
+            List<WeChatMessage> pageFilterMessageList = new ArrayList<>();
+            List<WeChatMessage> pageAllMessageList = new ArrayList<>();
+
+            NodeInfo nodeInfo = NodeInfo.NodeInfo(WeChatConstant.VersionName);
+
+            AccessibilityNodeInfo titleName = AutoUtils.getAutoElementById(AutoUtils.service,nodeInfo.msg_page_title,0);
 
             if(titleName==null){
                 ToastUtils.showLong("未找到正确元素，请确认所在位置。");
                 break;
             }
 
-            AccessibilityNodeInfo rootListView = AutoUtils.getAutoElementById(AutoUtils.service,"com.tencent.mm:id/b79",0);
+            AccessibilityNodeInfo rootListView = AutoUtils.getAutoElementById(AutoUtils.service,nodeInfo.msg_page_list_view,0);
             if(rootListView!=null){
-                List<AccessibilityNodeInfo> listMsg = rootListView.findAccessibilityNodeInfosByViewId("com.tencent.mm:id/b4b");
+                List<AccessibilityNodeInfo> listMsg = rootListView.findAccessibilityNodeInfosByViewId(nodeInfo.msg_page_text_msg_info);
                 if(listMsg!=null&&listMsg.size()>0){
                     for(AccessibilityNodeInfo accessibilityNodeInfo:listMsg){
                         Rect rect = new Rect();
@@ -158,17 +192,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         WeChatMessage weChatMessage = new WeChatMessage(person,0,accessibilityNodeInfo.getText().toString());
 
                         if(!isOnLastPage(weChatMessage)) {
-                            messageList.add(weChatMessage);
+                            pageFilterMessageList.add(weChatMessage);
                             //Log.e(TAG, person + ": " + accessibilityNodeInfo.getText().toString());
                         }
                         // 当前页面全部记录
-                        LastMessageList.clear();
-                        LastMessageList.add(weChatMessage);
+                        pageAllMessageList.add(weChatMessage);
+
+                        if(stopSlide(weChatMessage)){
+                            isRunning = false;
+                        }
+
                     }
-                    weChatMessagePage.setChatMessages(messageList);
+                    weChatMessagePage.setChatMessages(pageFilterMessageList);
                     AllPageMessageList.add(weChatMessagePage);
                 }
             }
+
+            LastMessageList  = pageAllMessageList;
+
+
             PageIndex ++ ;
             AutoUtils.slideScreenCenter(500,1,SLIDE_DOWN,1000,2000);
         }
@@ -211,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static boolean isOnLastPage(WeChatMessage weChatMessage){
         for(WeChatMessage weChatMessage1:LastMessageList){
-            if(weChatMessage.getPerson()==weChatMessage1.getPerson()&&weChatMessage.getMsg().equals(weChatMessage1.getMsg())){
+            if((weChatMessage.getPerson()==weChatMessage1.getPerson())&&(weChatMessage.getMsg().equals(weChatMessage1.getMsg()))){
                 return true;
             }
         }
@@ -240,5 +282,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String file_path  = "/storage/emulated/0"+"/Download/save_msg.json";
         FileUtils.createFileByDeleteOldFile(file_path);
         FileIOUtils.writeFileFromString(file_path, GsonUtils.toJson(AllPageMessageList));
+    }
+
+    private static boolean stopSlide(WeChatMessage weChatMessage){
+        //停止滑动方案  1  发现 以上是打招呼的内容
+        if(weChatMessage.getMsg().equals("以上是打招呼的内容"))
+        {
+            return true;
+        }
+        return false;
     }
 }
