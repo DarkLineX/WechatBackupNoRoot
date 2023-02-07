@@ -17,8 +17,34 @@
 ### 支持的微信版本【微信-我-设置-关于微信 查看版本】
 
 
-- Version 8.0.21
-- Version 8.0.32(最新版微信)
+#### 微信8.0
+
+- [x] Version 8.0.32(最新版微信)
+- [ ] Version 8.0.31
+- [ ] Version 8.0.30
+- [ ] Version 8.0.28
+- [ ] Version 8.0.27
+- [ ] Version 8.0.25
+- [ ] Version 8.0.24
+- [ ] Version 8.0.23
+- [ ] Version 8.0.22
+- [x] Version 8.0.21 
+- [ ] Version 8.0.20
+- [ ] Version 8.0.19
+- [ ] Version 8.0.18
+- [ ] Version 8.0.17
+- [ ] Version 8.0.16
+- [ ] Version 8.0.15
+- [ ] Version 8.0.14
+- [ ] Version 8.0.11
+- [ ] Version 8.0.10
+- [ ] Version 8.0.9
+- [ ] Version 8.0.7
+- [ ] Version 8.0.6
+- [ ] Version 8.0.3
+- [ ] Version 8.0.2
+- [ ] Version 8.0.1
+- [ ] Version 8.0.0
 
 
 #### 备份效果:
