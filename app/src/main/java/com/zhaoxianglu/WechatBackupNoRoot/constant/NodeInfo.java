@@ -11,37 +11,21 @@ public class NodeInfo {
         NodeInfo nodeInfo = new NodeInfo();
         switch (versionName) {
             case "8.0.0":
+            case "8.0.1":
+            case "8.0.2":
+            case "8.0.3":
+            case "8.0.6":
+            case "8.0.7":
+            case "8.0.9":
+            case "8.0.11":
                 nodeInfo.msg_page_title = "com.tencent.mm:id/ipt";
                 nodeInfo.msg_page_list_view = "com.tencent.mm:id/awv";
                 nodeInfo.msg_page_text_msg_info = "com.tencent.mm:id/auk";
                 break;
-            case "8.0.1":
-                nodeInfo.msg_page_title = "";
-                nodeInfo.msg_page_list_view = "";
-                nodeInfo.msg_page_text_msg_info = "";
-                break;
-            case "8.0.2":
-                nodeInfo.msg_page_title = "";
-                nodeInfo.msg_page_list_view = "";
-                nodeInfo.msg_page_text_msg_info = "";
-                break;
-            case "8.0.3":
-                nodeInfo.msg_page_title = "";
-                nodeInfo.msg_page_list_view = "";
-                nodeInfo.msg_page_text_msg_info = "";
-                break;
-            case "8.0.6":
-                nodeInfo.msg_page_title = "";
-                nodeInfo.msg_page_list_view = "";
-                nodeInfo.msg_page_text_msg_info = "";
-                break;
-            case "8.0.7":
-                break;
-            case "8.0.9":
-                break;
             case "8.0.10":
-                break;
-            case "8.0.11":
+                nodeInfo.msg_page_title = "com.tencent.mm:id/ipt";
+                nodeInfo.msg_page_list_view = "com.tencent.mm:id/awv";
+                nodeInfo.msg_page_text_msg_info = "com.tencent.mm:id/auk";
                 break;
             case "8.0.14":
                 break;
