@@ -35,7 +35,7 @@
 
 #### 微信8.0
 
-- [x] Version 8.0.32(最新版微信)
+- :white_check_mark: Version 8.0.32(最新版微信)
 - [ ] Version 8.0.31
 - [ ] Version 8.0.30
 - [ ] Version 8.0.28
@@ -44,26 +44,26 @@
 - [ ] Version 8.0.24
 - [ ] Version 8.0.23
 - [ ] Version 8.0.22
-- [x] Version 8.0.21 
+- :white_check_mark: Version 8.0.21 
 - [ ] Version 8.0.20
 - [ ] Version 8.0.19
 - [ ] Version 8.0.18
 - [ ] Version 8.0.17
 - [ ] Version 8.0.16
 - [ ] Version 8.0.15
-- [x] Version 8.0.14
-- [x] Version 8.0.13
-- [x] Version 8.0.12
-- [x] Version 8.0.11
-- [x] Version 8.0.10
-- [x] Version 8.0.9
-- [x] Version 8.0.8
-- [x] Version 8.0.7
-- [x] Version 8.0.6
-- [x] Version 8.0.5
-- [x] Version 8.0.4
-- [x] Version 8.0.3
-- [x] Version 8.0.2
-- [x] Version 8.0.1
+- :white_check_mark: Version 8.0.14
+- :white_check_mark: Version 8.0.13
+- :white_check_mark: Version 8.0.12
+- :white_check_mark: Version 8.0.11
+- :white_check_mark: Version 8.0.10
+- :white_check_mark: Version 8.0.9
+- :white_check_mark: Version 8.0.8
+- :white_check_mark: Version 8.0.7
+- :white_check_mark: Version 8.0.6
+- :white_check_mark: Version 8.0.5
+- :white_check_mark: Version 8.0.4
+- :white_check_mark: Version 8.0.3
+- :white_check_mark: Version 8.0.2
+- :white_check_mark: Version 8.0.1
 - :white_check_mark: Version 8.0.0
 
