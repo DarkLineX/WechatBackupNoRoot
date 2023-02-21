@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WechatBackupNoRoot</string>
+    <string name="app_name">WBNR</string>
     <string name="accessibility_desc">WeChat聊天数据备份</string>
     <string name="Instructions">1.安装打开给与悬浮窗文件读取权限 \n2.点击小鸭进入无障碍设置，打开软件无障碍服务。(成功后小鸭背景变绿)\n3.跳转联系人聊天界面，再次点击小鸭开始。 \n4.滚动到底按下小鸭暂停即可保存。</string>
 </resources>

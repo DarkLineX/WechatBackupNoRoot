@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static List<WeChatMessage> LastMessageList = new ArrayList<>();
     private static List<WeChatMessagePage> AllPageMessageList = new ArrayList<>();
     private static int PageIndex = 0;
+    private static int SameIndexCount = 0;
+
     private TextView tvInfo;
 
 
@@ -67,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         openFloatWindow();
         autoOpenAccessibility();
-
 
         Log.e(TAG,Environment.getExternalStorageDirectory().getAbsolutePath());
 
@@ -166,8 +167,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static void msgGet(){
         while (isRunning) {
-            WeChatMessagePage weChatMessagePage = new WeChatMessagePage(PageIndex);
 
+            Log.e(TAG,"本次抓取" + PageIndex);
+
+            WeChatMessagePage weChatMessagePage = new WeChatMessagePage(PageIndex);
 
             List<WeChatMessage> pageFilterMessageList = new ArrayList<>();
             List<WeChatMessage> pageAllMessageList = new ArrayList<>();
@@ -178,18 +181,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if(titleName==null){
                 ToastUtils.showLong("未找到正确元素，请确认所在位置。");
+                Log.e(TAG,"未找到正确元素，请确认所在位置。");
                 break;
             }
 
             AccessibilityNodeInfo rootListView = AutoUtils.getAutoElementById(AutoUtils.service,nodeInfo.msg_page_list_view,0);
             if(rootListView!=null){
                 List<AccessibilityNodeInfo> listMsg = rootListView.findAccessibilityNodeInfosByViewId(nodeInfo.msg_page_text_msg_info);
+
+
                 if(listMsg!=null&&listMsg.size()>0){
                     for(AccessibilityNodeInfo accessibilityNodeInfo:listMsg){
                         Rect rect = new Rect();
                         accessibilityNodeInfo.getBoundsInScreen(rect);
                         int person = msgPerson(rect);
-                        WeChatMessage weChatMessage = new WeChatMessage(person,0,accessibilityNodeInfo.getText().toString());
+
+                        WeChatMessage weChatMessage = null;
+
+                        if(accessibilityNodeInfo.getText()!=null){
+                            weChatMessage = new WeChatMessage(person,0,accessibilityNodeInfo.getText().toString());
+                        }else {
+                            weChatMessage = new WeChatMessage(person,0,"");
+                        }
 
                         if(!isOnLastPage(weChatMessage)) {
                             pageFilterMessageList.add(weChatMessage);
@@ -206,11 +219,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     weChatMessagePage.setChatMessages(pageFilterMessageList);
                     AllPageMessageList.add(weChatMessagePage);
                 }
+                //停止滑动方案2
+                if(isSamePage(pageAllMessageList)){
+                    SameIndexCount ++;
+                }else {
+                    SameIndexCount = 0;
+                }
+
+                if(SameIndexCount>5){
+                    isRunning = false;
+                }
             }
 
             LastMessageList  = pageAllMessageList;
-
-
             PageIndex ++ ;
             AutoUtils.slideScreenCenter(500,1,SLIDE_DOWN,1000,2000);
         }
@@ -250,6 +271,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private static boolean isSamePage(List<WeChatMessage> pageAllMessageList){
+
+        if(pageAllMessageList.size()==LastMessageList.size()){
+
+            for(int i=0;i<pageAllMessageList.size();i++){
+
+                if((pageAllMessageList.get(i).getPerson()==LastMessageList.get(i).getPerson())&&(pageAllMessageList.get(i).getMsg().equals(LastMessageList.get(i).getMsg()))){
+                    //ok
+                }else {
+                    return false;
+                }
+
+            }
+
+        }
+        return true;
+    }
 
     private static boolean isOnLastPage(WeChatMessage weChatMessage){
         for(WeChatMessage weChatMessage1:LastMessageList){
@@ -290,6 +328,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             return true;
         }
+
+        //停止滑动方案2 没有新增
+        if(weChatMessage.getMsg().equals("以上是打招呼的内容"))
+        {
+            return true;
+        }
+
         return false;
     }
 }
