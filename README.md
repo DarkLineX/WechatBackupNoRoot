@@ -65,5 +65,5 @@
 - [x] Version 8.0.3
 - [x] Version 8.0.2
 - [x] Version 8.0.1
-- [x] Version 8.0.0
+- :white_check_mark: Version 8.0.0
 
