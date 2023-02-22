@@ -27,29 +27,31 @@
 
 2.给予读写权限和悬浮窗权限
 
-![](img/02.jpg)
+![x8CGV.png](https://i.328888.xyz/2023/02/22/x8CGV.png)
 
 
-![](img/03.jpg)
+![x8lYd.png](https://i.328888.xyz/2023/02/22/x8lYd.png)
 
 3.进入软件点击小黄鸭 进入无障碍设置 【成功后小黄鸭背景变绿】
 
-![](img/01.jpg)
+![x808N.png](https://i.328888.xyz/2023/02/22/x808N.png)
 
-![](img/05.jpg)
+![x8Hxq.png](https://i.328888.xyz/2023/02/22/x8Hxq.png)
 
-![](img/06.jpg)
+![x8OMz.png](https://i.328888.xyz/2023/02/22/x8OMz.png)
 
 3.移动到聊天界面，拉倒界面最下方显示最新聊天点击开始。
 
-![](img/07.jpg)
+![x88ca.png](https://i.328888.xyz/2023/02/22/x88ca.png)
 
 
 4.等待不再滑动为止，进入文件管理Download查看文件。
 
-![](img/08.jpg)
 
-![](img/09.jpg)
+![x8jtw.png](https://i.328888.xyz/2023/02/22/x8jtw.png)
+
+![x8Isx.png](https://i.328888.xyz/2023/02/22/x8Isx.png)
+
 
 
 ### 支持的微信版本【微信-我-设置-关于微信 查看版本】
