@@ -10,8 +10,8 @@ android {
         applicationId "com.zhaoxianglu.WechatBackupNoRoot"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 2
-        versionName "WechatBackupNoRootV_1.1"
+        versionCode 3
+        versionName "WechatBackupNoRootV_1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
