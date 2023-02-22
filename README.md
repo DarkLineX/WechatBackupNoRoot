@@ -35,35 +35,35 @@
 
 #### 微信8.0
 
-- :white_check_mark: Version 8.0.32 
-- [ ] Version 8.0.31 
-- [ ] Version 8.0.30 
-- [ ] Version 8.0.28 
-- [ ] Version 8.0.27
-- [ ] Version 8.0.25 
-- [ ] Version 8.0.24 
-- [ ] Version 8.0.23 
-- [ ] Version 8.0.22 
-- :white_check_mark: Version 8.0.21 
-- [ ] Version 8.0.20 
-- [ ] Version 8.0.19 
-- [ ] Version 8.0.18 
-- [ ] Version 8.0.17 
-- [ ] Version 8.0.16
-- [ ] Version 8.0.15 
-- :white_check_mark: Version 8.0.14 
-- :white_check_mark: Version 8.0.13 
-- :white_check_mark: Version 8.0.12 
-- :white_check_mark: Version 8.0.11
-- :white_check_mark: Version 8.0.10 
-- :white_check_mark: Version 8.0.9 
-- :white_check_mark: Version 8.0.8 
-- :white_check_mark: Version 8.0.7 
-- :white_check_mark: Version 8.0.6
-- :white_check_mark: Version 8.0.5 
-- :white_check_mark: Version 8.0.4 
-- :white_check_mark: Version 8.0.3 
-- :white_check_mark: Version 8.0.2 
-- :white_check_mark: Version 8.0.1
-- :white_check_mark: Version 8.0.0
+:white_check_mark: Version 8.0.32 
+:x: Version 8.0.31 
+:x: Version 8.0.30 
+:x: Version 8.0.28 
+:x: Version 8.0.27
+:x: Version 8.0.25 
+:x: Version 8.0.24 
+:x: Version 8.0.23 
+:x: Version 8.0.22 
+:white_check_mark: Version 8.0.21 
+:x: Version 8.0.20 
+:x: Version 8.0.19 
+:x: Version 8.0.18 
+:x: Version 8.0.17 
+:x: Version 8.0.16
+:x: Version 8.0.15 
+:white_check_mark: Version 8.0.14 
+:white_check_mark: Version 8.0.13 
+:white_check_mark: Version 8.0.12 
+:white_check_mark: Version 8.0.11
+:white_check_mark: Version 8.0.10 
+:white_check_mark: Version 8.0.9 
+:white_check_mark: Version 8.0.8 
+:white_check_mark: Version 8.0.7 
+:white_check_mark: Version 8.0.6
+:white_check_mark: Version 8.0.5 
+:white_check_mark: Version 8.0.4 
+:white_check_mark: Version 8.0.3 
+:white_check_mark: Version 8.0.2 
+:white_check_mark: Version 8.0.1
+:white_check_mark: Version 8.0.0
 
