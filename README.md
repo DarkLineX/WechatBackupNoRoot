@@ -36,24 +36,24 @@
 #### 微信8.0
 
 :white_check_mark: Version 8.0.32 
-:x: Version 8.0.31 
-:x: Version 8.0.30 
-:x: Version 8.0.28 
-:x: Version 8.0.27
+:white_check_mark: Version 8.0.31 
+:white_check_mark: Version 8.0.30 
+:white_check_mark: Version 8.0.28 
+:white_check_mark: Version 8.0.27
 
-:x: Version 8.0.25 
-:x: Version 8.0.24 
-:x: Version 8.0.23 
-:x: Version 8.0.22 
+:white_check_mark: Version 8.0.25 
+:white_check_mark: Version 8.0.24 
+:white_check_mark: Version 8.0.23 
+:white_check_mark: Version 8.0.22 
 :white_check_mark: Version 8.0.21 
 
-:x: Version 8.0.20 
-:x: Version 8.0.19 
-:x: Version 8.0.18 
-:x: Version 8.0.17 
-:x: Version 8.0.16
+:white_check_mark: Version 8.0.20 
+:white_check_mark: Version 8.0.19 
+:white_check_mark: Version 8.0.18 
+:white_check_mark: Version 8.0.17 
+:white_check_mark: Version 8.0.16
 
-:x: Version 8.0.15 
+:white_check_mark: Version 8.0.15 
 :white_check_mark: Version 8.0.14 
 :white_check_mark: Version 8.0.13 
 :white_check_mark: Version 8.0.12 
