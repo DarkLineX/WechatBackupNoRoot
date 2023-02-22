@@ -60,16 +60,16 @@
 :white_check_mark: Version 8.0.11
 
 :white_check_mark: Version 8.0.10 
-:white_check_mark: Version 8.0.9  
-:white_check_mark: Version 8.0.8  
-:white_check_mark: Version 8.0.7  
-:white_check_mark: Version 8.0.6 
+:white_check_mark: Version 8.0.9 
+:white_check_mark: Version 8.0.8 
+:white_check_mark: Version 8.0.7 
+:white_check_mark: Version 8.0.6
 
-:white_check_mark: Version 8.0.5  
-:white_check_mark: Version 8.0.4  
-:white_check_mark: Version 8.0.3  
-:white_check_mark: Version 8.0.2  
-:white_check_mark: Version 8.0.1 
+:white_check_mark: Version 8.0.5 
+:white_check_mark: Version 8.0.4 
+:white_check_mark: Version 8.0.3 
+:white_check_mark: Version 8.0.2 
+:white_check_mark: Version 8.0.1
 
-:white_check_mark: Version 8.0.0 
+:white_check_mark: Version 8.0.0
 
