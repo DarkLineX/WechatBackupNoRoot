@@ -96,7 +96,7 @@
 
 :white_check_mark: Version 8.0.0
 
-### TODOLiist
+### TODO List
 
 > 软件得到了大家的喜爱，加上新的更新计划。
 
