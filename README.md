@@ -96,3 +96,9 @@
 
 :white_check_mark: Version 8.0.0
 
+### TODOLiist
+
+- 版本更新支持
+- 图片和富文本备份
+- 群聊备份
+- 朋友圈备份
