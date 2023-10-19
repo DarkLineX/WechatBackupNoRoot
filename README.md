@@ -19,7 +19,7 @@
 - 无需电脑配合
 - 无需解密,数据明文保存
 
-开箱即用: [工具下载页面](https://github.com/MiDuoKi/WechatBackupNoRoot/releases)
+开箱即用: [工具下载页面](https://github.com/Eeeextend/WechatBackupNoRoot/releases)
 
 #### 使用教程【已小米为例】
 
@@ -27,31 +27,11 @@
 
 2.给予读写权限和悬浮窗权限
 
-![x8CGV.png](https://i.328888.xyz/2023/02/22/x8CGV.md.png)
-
-
-![x8lYd.png](https://i.328888.xyz/2023/02/22/x8lYd.md.png)
-
 3.进入软件点击小黄鸭 进入无障碍设置 【成功后小黄鸭背景变绿】
 
-![x808N.png](https://i.328888.xyz/2023/02/22/x808N.md.png)
+4.移动到聊天界面，拉倒界面最下方显示最新聊天点击开始。
 
-![x8Hxq.png](https://i.328888.xyz/2023/02/22/x8Hxq.md.png)
-
-![x8OMz.png](https://i.328888.xyz/2023/02/22/x8OMz.md.png)
-
-3.移动到聊天界面，拉倒界面最下方显示最新聊天点击开始。
-
-![x88ca.png](https://i.328888.xyz/2023/02/22/x88ca.md.png)
-
-
-4.等待不再滑动为止，进入文件管理Download查看文件。
-
-
-![x8jtw.png](https://i.328888.xyz/2023/02/22/x8jtw.md.png)
-
-![x8Isx.png](https://i.328888.xyz/2023/02/22/x8Isx.md.png)
-
+5.等待不再滑动为止，进入文件管理Download查看文件。
 
 ### 支持的微信版本【微信-我-设置-关于微信 查看版本】
 
