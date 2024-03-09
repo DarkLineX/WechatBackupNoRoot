@@ -2,6 +2,13 @@
 
 免ROOT微信聊天数据备份/导出工具
 
+#### V2.0 新版本预告
+
+- 采用新版的自动化引擎
+- 简化操作逻辑
+- 提高识别成功率
+- 整体版本更新 UI更新
+
 ### ToDo
 
 - 适配更多版本
@@ -46,39 +53,63 @@ update note
 #### 微信8.0
 
 :white_check_mark: Version 8.0.32 
+
 :white_check_mark: Version 8.0.31 
+
 :white_check_mark: Version 8.0.30 
+
 :white_check_mark: Version 8.0.28 
+
 :white_check_mark: Version 8.0.27
 
 :white_check_mark: Version 8.0.25 
+
 :white_check_mark: Version 8.0.24 
+
 :white_check_mark: Version 8.0.23 
+
 :white_check_mark: Version 8.0.22 
+
 :white_check_mark: Version 8.0.21 
 
 :white_check_mark: Version 8.0.20 
+
 :white_check_mark: Version 8.0.19 
+
 :white_check_mark: Version 8.0.18 
+
 :white_check_mark: Version 8.0.17 
+
 :white_check_mark: Version 8.0.16
 
 :white_check_mark: Version 8.0.15 
+
 :white_check_mark: Version 8.0.14 
+
 :white_check_mark: Version 8.0.13 
+
 :white_check_mark: Version 8.0.12 
+
 :white_check_mark: Version 8.0.11
 
 :white_check_mark: Version 8.0.10 
+
 :white_check_mark: Version 8.0.9 
+
 :white_check_mark: Version 8.0.8 
+
 :white_check_mark: Version 8.0.7 
+
 :white_check_mark: Version 8.0.6
 
 :white_check_mark: Version 8.0.5 
+
 :white_check_mark: Version 8.0.4 
+
 :white_check_mark: Version 8.0.3 
+
 :white_check_mark: Version 8.0.2 
+
 :white_check_mark: Version 8.0.1
 
 :white_check_mark: Version 8.0.0
